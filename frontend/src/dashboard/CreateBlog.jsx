@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
+import {BACKEND_URL} from "../utils.js"
 import toast from 'react-hot-toast';
 
 function CreateBlog() {
@@ -30,7 +31,7 @@ function CreateBlog() {
 
     formData.append('blogImage', blogImage);
     try {
-      const { data } = await axios.post('http://localhost:4001/api/blogs/create-blog', formData, {
+      const { data } = await axios.post(`${BACKEND_URL}/api/blogs/create-blog`, formData, {
         withCredentials: true,
         headers: {
           'Content-Type': 'multipart/form-data',

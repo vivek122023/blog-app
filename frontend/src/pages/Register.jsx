@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import {BACKEND_URL} from "../utils.js"
 import { useAuth } from '../context/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -40,7 +41,7 @@ const Register = () => {
     formData.append('photo', photo);
 
     try {
-      const { data } = await axios.post('http://localhost:4001/api/users/register', formData, {
+      const { data } = await axios.post(`${BACKEND_URL}/api/users/register`, formData, {
         withCredentials: true,
         headers: {
           'Content-Type': 'multipart/form-data',

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import {BACKEND_URL} from "../utils.js"
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useNavigate } from 'react-router-dom';
@@ -10,7 +11,7 @@ function MyBlogs() {
   useEffect(() => {
     const fetchMyBlogs = async () => {
       try {
-        const { data } = await axios.get('http://localhost:4001/api/blogs/my-blogs', {
+        const { data } = await axios.get(`${BACKEND_URL}/api/blogs/my-blogs`, {
           withCredentials: true,
         });
         console.log(data.blogs);
