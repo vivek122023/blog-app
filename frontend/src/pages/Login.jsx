@@ -54,7 +54,7 @@ function Login() {
         <div className="w-full max-w-md rounded-lg bg-white p-8 shadow-md">
           <form onSubmit={handleLogin}>
             <div className="items-center text-center text-xl font-semibold">
-              Cilli<span className="text-blue-500">Blog</span>
+              PostCraft &nbsp;<span className="text-blue-500">CMS</span>
             </div>
             <h1 className="mb-6 text-xl font-semibold">Login</h1>
             <select
