@@ -16,7 +16,9 @@ const port = process.env.PORT || 3000;
 // middleware
 app.use(
   cors({
-    origin:[ process.env.FRONTEND_URL,
+    origin: [
+      process.env.FRONTEND_URL,
+      "https://blog-m0v39dk0z-vivek-kumars-projects-f0c10f3a.vercel.app/",
     ],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
